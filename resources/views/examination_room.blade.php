@@ -27,10 +27,10 @@
                 <td class="border-2">{{ $ExaminationRoom->capacity}}</td>
                 
                 <td class="border-2">
-                    <a href="{{ route('modify', ['id' => $ExaminationRoom->id]) }}">UPDATE</a>
+                    <a href="{{ route('modify_R', ['id' => $ExaminationRoom->id]) }}">UPDATE</a>
                 </td>
                 <td class="border-2">
-                    <form method="POST" action="{{route('delete', ['id' => $ExaminationRoom->id])}}">
+                    <form method="POST" action="{{route('delete_R', ['id' => $ExaminationRoom->id])}}">
                         @csrf
                         @method("DELETE")
                         <input type="submit" value="DELETE" />
@@ -46,7 +46,7 @@
 
 <h1>Add New ExaminationRoom</h1>
 
-<form method="POST" action="{{route('store')}}">
+<form method="POST" action="{{route('store_R')}}">
     @csrf
 
     <label for="name"> Name:</label>

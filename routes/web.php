@@ -16,23 +16,23 @@ use App\Http\Controllers\ExaminationCommitteeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');
 });
 
-Route::get('/candidates',[CandidateController::class,"index"])->name('index');
-Route::post('/candidates',[CandidateController::class,"store"])->name('store');
-Route::delete('/candidates/{id}',[CandidateController::class,"delete"])->name('delete');
-Route::put('/modify_candidates/{id}', [CandidateController::class, 'update'])->name('update');
-Route::get('/modify_candidates/{id?}',[CandidateController::class,"modify"])->name('modify');
+Route::get('/candidates',[CandidateController::class,"index"])->name('index_C');
+Route::post('/candidates',[CandidateController::class,"store"])->name('store_C');
+Route::delete('/candidates/{id}',[CandidateController::class,"delete"])->name('delete_C');
+Route::put('/modify_candidates/{id}', [CandidateController::class, 'update'])->name('update_C');
+Route::get('/modify_candidates/{id?}',[CandidateController::class,"modify"])->name('modify_C');
 
 
 
 
-Route::get('/examination_room',[ExaminationRoomController::class,"index"])->name('index');
-Route::post('/examination_room',[ExaminationRoomController::class,"store"])->name('store');
-Route::delete('/examination_room/{id}',[ExaminationRoomController::class,"delete"])->name('delete');
-Route::put('/modify_room/{id}', [ExaminationRoomController::class, 'update'])->name('update');
-Route::get('/modify_room/{id?}',[ExaminationRoomController::class,"modify"])->name('modify');
+Route::get('/examination_room',[ExaminationRoomController::class,"index"])->name('index_R');
+Route::post('/examination_room',[ExaminationRoomController::class,"store"])->name('store_R');
+Route::delete('/examination_room/{id}',[ExaminationRoomController::class,"delete"])->name('delete_R');
+Route::put('/modify_room/{id}', [ExaminationRoomController::class, 'update'])->name('update_R');
+Route::get('/modify_room/{id?}',[ExaminationRoomController::class,"modify"])->name('modify_R');
 
 
 

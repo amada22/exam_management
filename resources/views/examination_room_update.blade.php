@@ -10,7 +10,7 @@
 <h1>UPDATE ExaminationRoom</h1>
 <h3>{{$ExaminationRoom->id}}</h3>
 
-<form method="POST" action="{{route('update', ['id' => $ExaminationRoom->id])}}">
+<form method="POST" action="{{route('update_R', ['id' => $ExaminationRoom->id])}}">
     @csrf
     @method('PUT')
 

@@ -33,7 +33,7 @@ class ExaminationRoomController extends Controller
         $ExaminationRoom = ExaminationRoom::findOrFail($id);
         $ExaminationRoom->delete();
 
-        return redirect()->back();
+        return redirect()->route('index_R');
     }
 
     public function update(Request $req , $id){
@@ -54,7 +54,7 @@ class ExaminationRoomController extends Controller
        
         ]);
 
-        return redirect()->route('index');
+        return redirect()->route('index_R');
     }
 
     public function modify($id){

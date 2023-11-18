@@ -55,7 +55,7 @@ class CandidateController extends Controller
        
         ]);
 
-        return redirect()->route('index');
+        return redirect()->route('index_C');
     }
 
     public function modify($id){

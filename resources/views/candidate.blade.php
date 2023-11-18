@@ -28,10 +28,10 @@
                 <td class="border-2">{{ $candidate->first_name }}</td>
                 <td class="border-2">{{ $candidate->last_name }}</td>
                 <td class="border-2">
-                    <a href="{{ route('modify', ['id' => $candidate->id]) }}">UPDATE</a>
+                    <a href="{{ route('modify_C', ['id' => $candidate->id]) }}">UPDATE</a>
                 </td>
                 <td class="border-2">
-                    <form method="POST" action="{{route('delete', ['id' => $candidate->id])}}">
+                    <form method="POST" action="{{route('delete_C', ['id' => $candidate->id])}}">
                         @csrf
                         @method("DELETE")
                         <input type="submit" value="DELETE" />
@@ -47,7 +47,7 @@
 
 <h1>Add New Candidate</h1>
 
-<form method="POST" action="{{route('store')}}">
+<form method="POST" action="{{route('store_C')}}">
     @csrf
 
     <label for="name">Full Name:</label>
