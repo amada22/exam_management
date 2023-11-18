@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\ExaminationRoomController;
 use App\Http\Controllers\ExaminationCommitteeController;
+use App\Http\Controllers\DistributionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,9 +16,10 @@ use App\Http\Controllers\ExaminationCommitteeController;
 |
 */
 
-Route::get('/', function () {
-    return view('master');
-});
+Route::get('/',[DistributionController::class,"index"])->name('index_D');
+Route::post('/',[DistributionController::class,"autoAssignRoomsAndCommittees"])->name('distribution');
+Route::get('/d', [DistributionController::class, 'deleteDistribution'])->name('delete_D');
+
 
 Route::get('/candidates',[CandidateController::class,"index"])->name('index_C');
 Route::post('/candidates',[CandidateController::class,"store"])->name('store_C');
