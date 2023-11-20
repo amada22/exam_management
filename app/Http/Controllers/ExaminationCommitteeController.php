@@ -78,7 +78,7 @@ class ExaminationCommitteeController extends Controller
   
         $ExaminationCommittee = ExaminationCommittee::find($id);
 
-        return view('Examination_Committee_update', ['ExaminationCommittee'=>$ExaminationCommittee]);
+        return view('update.Examination_Committee_update', ['ExaminationCommittee'=>$ExaminationCommittee]);
     }
 
 }

@@ -65,7 +65,7 @@ class ExaminationRoomController extends Controller
   
         $ExaminationRoom = ExaminationRoom::find($id);
 
-        return view('Examination_Room_update', ['ExaminationRoom'=>$ExaminationRoom]);
+        return view('update.Examination_Room_update', ['ExaminationRoom'=>$ExaminationRoom]);
     }
 
 

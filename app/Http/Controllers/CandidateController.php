@@ -68,7 +68,7 @@ class CandidateController extends Controller
   
         $candidate = Candidate::find($id);
 
-        return view('update_candidate', ['candidate'=>$candidate]);
+        return view('update.update_candidate', ['candidate'=>$candidate]);
     }
 
 
