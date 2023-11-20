@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+@extends('master')
+ 
+@section('content')
     
 <h1>UPDATE ExaminationRoom</h1>
 <h3>{{$ExaminationRoom->id}}</h3>
@@ -24,5 +19,4 @@
     <button type="submit">UPDATE ExaminationRoom</button>
 </form>
 
-</body>
-</html>
+@endsection

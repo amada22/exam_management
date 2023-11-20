@@ -15,8 +15,8 @@ use App\Http\Controllers\DistributionController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',[DistributionController::class,"index"])->name('index_D');
+Route::get('/distribution',[DistributionController::class,"index"])->name('index_D');
+Route::get('/',[DistributionController::class,"master"])->name('master');
 Route::post('/',[DistributionController::class,"autoAssignRoomsAndCommittees"])->name('distribution');
 Route::get('/d', [DistributionController::class, 'deleteDistribution'])->name('delete_D');
 

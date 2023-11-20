@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ExaminationRoom;
+use Illuminate\Support\Facades\DB;
 
 class ExaminationRoomController extends Controller
 {
@@ -30,8 +31,11 @@ class ExaminationRoomController extends Controller
 
     public function delete($id){
 
+        DB::statement('DELETE FROM candidate_examination_committee WHERE examination_room_id = ?', [$id]);
+
         $ExaminationRoom = ExaminationRoom::findOrFail($id);
         $ExaminationRoom->delete();
+
 
         return redirect()->route('index_R');
     }

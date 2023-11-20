@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\DB;
 class DistributionController extends Controller
 {
 
+    public function master(){
+  
+       
+        
+        return view('master');
+    }
 
     public function index(){
   
@@ -17,7 +23,7 @@ class DistributionController extends Controller
         ->orderBy('name')
         ->get();
         
-        return view('master', ['candidates'=>$candidates ]);
+        return view('distribution', ['candidates'=>$candidates ]);
     }
 
 

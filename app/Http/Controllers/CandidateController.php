@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Candidate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CandidateController extends Controller
 {
@@ -30,8 +31,13 @@ class CandidateController extends Controller
 
     public function delete($id){
 
+
+        DB::statement('DELETE FROM candidate_examination_committee WHERE candidate_id = ?', [$id]);
+        DB::statement('DELETE FROM candidate_examination_room WHERE candidate_id = ?', [$id]);
+
         $candidate = Candidate::findOrFail($id);
         $candidate->delete();
+
 
         return redirect()->back();
     }

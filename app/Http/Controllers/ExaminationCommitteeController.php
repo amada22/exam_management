@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ExaminationCommittee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ExaminationCommitteeController extends Controller
 {
@@ -38,8 +39,13 @@ class ExaminationCommitteeController extends Controller
 
     public function delete($id){
 
+        DB::statement('DELETE FROM candidate_examination_committee WHERE examination_committee_id = ?', [$id]);
+
         $ExaminationCommittee = ExaminationCommittee::findOrFail($id);
         $ExaminationCommittee->delete();
+
+ 
+
 
         return redirect()->back();
     }
