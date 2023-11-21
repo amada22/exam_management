@@ -12,10 +12,7 @@ class DistributionController extends Controller
 
     public function master(){
   
-        $Room = ExaminationRoom::with(['candidates'])
-        ->get();
-        
-        return view('master',['rooms'=>$Room]);
+        return view('master');
     }
 
     public function index(){
