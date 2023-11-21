@@ -12,7 +12,8 @@ class DistributionController extends Controller
 
     public function master(){
   
-        $Room = ExaminationRoom::with('candidates.examinationCommittees')->get();
+        $Room = ExaminationRoom::with(['candidates'])
+        ->get();
         
         return view('master',['rooms'=>$Room]);
     }
@@ -22,8 +23,12 @@ class DistributionController extends Controller
         $candidates = Candidate::with(['examinationRooms', 'examinationCommittees'])
         ->orderBy('name')
         ->get();
+
+        $Room = ExaminationRoom::with(['candidates'])
+        ->get();
         
-        return view('distribution', ['candidates'=>$candidates ]);
+        
+        return view('distribution', ['candidates'=>$candidates ,'rooms'=>$Room ]);
     }
 
 
