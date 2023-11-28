@@ -2,7 +2,7 @@
  
 @section('content')
  
-<h1>List of ExaminationRoom</h1>
+<h1 class="text-4xl" >List of ExaminationRoom</h1>
 
 
 <table class="border-2 p-4" >
@@ -39,7 +39,7 @@
 
 
 
-<h1>Add New ExaminationRoom</h1>
+<h1 class="text-4xl">Add New ExaminationRoom</h1>
 
 <form method="POST" action="{{route('store_R')}}">
     @csrf

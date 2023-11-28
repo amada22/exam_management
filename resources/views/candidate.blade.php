@@ -2,7 +2,7 @@
  
 @section('content')
 
-<h1>List of Candidates</h1>
+<h1 class="text-4xl">List of Candidates</h1>
 
 
 <table class="border-2 p-4" >
@@ -40,7 +40,7 @@
 
 
 
-<h1>Add New Candidate</h1>
+<h1 class="text-4xl">Add New Candidate</h1>
 
 <form method="POST" action="{{route('store_C')}}">
     @csrf

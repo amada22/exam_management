@@ -1,10 +1,11 @@
 @extends('master')
  
 @section('content')
-
+<h1 class="text-4xl m-auto">Distribution</h1>
+<br>
 <form action="{{ route('distribution') }}" method="post">
     @csrf
-    <button type="submit">Auto Assign Candidates</button>
+    <button type="submit" >Auto Assign Candidates</button>
     </form>
 
     <button type="submit"> <a href="{{ route('delete_D') }}">Reset </a></button>
@@ -12,9 +13,9 @@
 
 
 
-    <h1 style="color: black; font-size: 24px;" >the repartition</h1> 
+    <h1 class="text-4xl m-auto" >RESULT :</h1> 
 
-    <br><br><br>
+    <br>
 
     @foreach ($rooms as $room)
     <h2 style="color: black; font-size: 24px;">{{ $room->name }} Candidates</h2>

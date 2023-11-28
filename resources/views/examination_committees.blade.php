@@ -2,7 +2,7 @@
  
 @section('content')
  
-<h1>List of ExaminationCommittee</h1>
+<h1 class="text-4xl">List of ExaminationCommittee</h1>
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-<h1>Add New Examination Committee</h1>
+<h1 class="text-4xl">Add New Examination Committee</h1>
 
 <form method="POST" action="{{ route('store') }}">
     @csrf
