@@ -5,6 +5,7 @@ use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\ExaminationRoomController;
 use App\Http\Controllers\ExaminationCommitteeController;
 use App\Http\Controllers\DistributionController;
+use App\Http\Controllers\authController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,3 +48,6 @@ Route::delete('/examination_committees/{id}',[ExaminationCommitteeController::cl
 Route::put('/modify_committees/{id}', [ExaminationCommitteeController::class, 'update'])->name('update');
 Route::get('/modify_committees/{id?}',[ExaminationCommitteeController::class,"modify"])->name('modify');
 
+
+Route::get('/login',[authController::class,"login"])->name('login');
+Route::get('/register',[authController::class,"register"])->name('register');
