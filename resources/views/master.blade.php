@@ -9,14 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body >
-<style>
-      .gradient {
-        background: linear-gradient(90deg, #20cd3a 0%, #15b9c1 100%);
-      }
-      .buttonclr {
-        background: linear-gradient(90deg, #036812 0%, #15b9c1 100%);
-      }
-    </style>
+
 
 <div class="flex flex-do h-screen">
 
@@ -25,20 +18,34 @@
 <div class="bg-slate-100 flex flex-col justify-between items-center bg-green-900  w-16 p-4">
   <div class="flex flex-col space-y-4"> 
     <a href="/candidates" class="mb-3">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mr-2 hover:text-green-200 text-white" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M4 10a2 2 0 012-2h2V6a2 2 0 012-2h2a2 2 0 012 2v2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2H6a2 2 0 01-2-2z" clip-rule="evenodd"/>
-       </svg>
+      
+    
+    <svg class="w-8 hover:text-green-200  h-8 mr-2 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 19">
+    <path d="M14.5 0A3.987 3.987 0 0 0 11 2.1a4.977 4.977 0 0 1 3.9 5.858A3.989 3.989 0 0 0 14.5 0ZM9 13h2a4 4 0 0 1 4 4v2H5v-2a4 4 0 0 1 4-4Z"/>
+    <path d="M5 19h10v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2ZM5 7a5.008 5.008 0 0 1 4-4.9 3.988 3.988 0 1 0-3.9 5.859A4.974 4.974 0 0 1 5 7Zm5 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm5-1h-.424a5.016 5.016 0 0 1-1.942 2.232A6.007 6.007 0 0 1 17 17h2a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5ZM5.424 9H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h2a6.007 6.007 0 0 1 4.366-5.768A5.016 5.016 0 0 1 5.424 9Z"/>
+  </svg>
     </a>
     
-    <a href="/examination_committees" class="hover:text-white">
-      <svg class="w-8 hover:text-green-200  h-8 mr-2 text-white "  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 9C16 11.2091 14.2091 13 12 13C9.79086 13 8 11.2091 8 9C8 6.79086 9.79086 5 12 5C14.2091 5 16 6.79086 16 9ZM14 9C14 10.1046 13.1046 11 12 11C10.8954 11 10 10.1046 10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 14.0902 3.71255 16.014 4.90798 17.5417C6.55245 15.3889 9.14627 14 12.0645 14C14.9448 14 17.5092 15.3531 19.1565 17.4583C20.313 15.9443 21 14.0524 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12ZM12 21C9.84977 21 7.87565 20.2459 6.32767 18.9878C7.59352 17.1812 9.69106 16 12.0645 16C14.4084 16 16.4833 17.1521 17.7538 18.9209C16.1939 20.2191 14.1881 21 12 21Z" fill="currentColor" /></svg>
+    <a href="/examination_committees" >
+    <svg class="w-10 hover:text-green-200  h-10 mr-2 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="teacher" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.17 16A5.17 5.17 0 1 0 11 10.83 5.17 5.17 0 0 0 16.17 16zm0-9a3.84 3.84 0 1 1-3.84 3.83A3.84 3.84 0 0 1 16.17 7zm2.54 10h-5.09a7.3 7.30 0 0 0-7.29 7.29V25a.67.67 0 0 0 .67.67h8.89a.64.64 0 0 0 .2 0 .69.69 0 0 0 .2 0h9A.67.67 0 0 0 26 25v-.71A7.3 7.30 0 0 0 18.71 17zm-2.19 1.33.82 4.14L16.09 24l-1.25-1.52.81-4.14zm-8.85 6a6 6 0 0 1 5.95-6h.67l-.82 4.19a.64.64 0 0 0 .14.55l1 1.26h-7zm17 0h-7.14l1-1.26a.67.67 0 0 0 .14-.55l-.83-4.19h.83a6 6 0 0 1 6 6z" data-name="Layer 46"></path>
+</svg>
+
     <a>
     <a href="/examination_room" >
-      <svg class="w-8 hover:text-green-200  h-8 mr-2 text-white " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z" fill="currentColor" /></svg>
+    <svg class="w-10 hover:text-green-200  h-10 mr-2 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="classroom" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+    <line x1="12" y1="18" x2="12" y2="22"/>
+    <line x1="7" y1="14" x2="17" y2="14"/>
+    <line x1="9" y1="10" x2="9" y2="14"/>
+    <line x1="15" y1="10" x2="15" y2="14"/>
+</svg>
+
     </a>
     <a href="/distribution" >
-      <svg class="w-8 hover:text-green-200  h-8 mr-2 text-white " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="currentColor" /></svg></a>
-    </a>
+    <svg class="w-8 hover:text-green-200  h-8 mr-2 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5h6M9 8h6m-6 3h6M4.996 5h.01m-.01 3h.01m-.01 3h.01M2 1h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
+  </svg>    </a>
 
     
    
