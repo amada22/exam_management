@@ -1,116 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exam management</title>
-    
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
-<body >
-
-
-<div class="flex flex-do h-screen">
-
-
-
-<div class="bg-slate-100 flex flex-col justify-between items-center bg-green-900  w-16 p-4">
-  <div class="flex flex-col space-y-4"> 
-    <a href="/candidates" class="mb-3">
-      
-    
-    <svg class="w-8 hover:text-green-200  h-8 mr-2 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 19">
-    <path d="M14.5 0A3.987 3.987 0 0 0 11 2.1a4.977 4.977 0 0 1 3.9 5.858A3.989 3.989 0 0 0 14.5 0ZM9 13h2a4 4 0 0 1 4 4v2H5v-2a4 4 0 0 1 4-4Z"/>
-    <path d="M5 19h10v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2ZM5 7a5.008 5.008 0 0 1 4-4.9 3.988 3.988 0 1 0-3.9 5.859A4.974 4.974 0 0 1 5 7Zm5 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm5-1h-.424a5.016 5.016 0 0 1-1.942 2.232A6.007 6.007 0 0 1 17 17h2a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5ZM5.424 9H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h2a6.007 6.007 0 0 1 4.366-5.768A5.016 5.016 0 0 1 5.424 9Z"/>
-  </svg>
-    </a>
-    
-    <a href="/examination_committees" >
-    <svg class="w-10 hover:text-green-200  h-10 mr-2 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="teacher" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M16.17 16A5.17 5.17 0 1 0 11 10.83 5.17 5.17 0 0 0 16.17 16zm0-9a3.84 3.84 0 1 1-3.84 3.83A3.84 3.84 0 0 1 16.17 7zm2.54 10h-5.09a7.3 7.30 0 0 0-7.29 7.29V25a.67.67 0 0 0 .67.67h8.89a.64.64 0 0 0 .2 0 .69.69 0 0 0 .2 0h9A.67.67 0 0 0 26 25v-.71A7.3 7.30 0 0 0 18.71 17zm-2.19 1.33.82 4.14L16.09 24l-1.25-1.52.81-4.14zm-8.85 6a6 6 0 0 1 5.95-6h.67l-.82 4.19a.64.64 0 0 0 .14.55l1 1.26h-7zm17 0h-7.14l1-1.26a.67.67 0 0 0 .14-.55l-.83-4.19h.83a6 6 0 0 1 6 6z" data-name="Layer 46"></path>
-</svg>
-
-    <a>
-    <a href="/examination_room" >
-    <svg class="w-10 hover:text-green-200  h-10 mr-2 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="classroom" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
-    <line x1="12" y1="18" x2="12" y2="22"/>
-    <line x1="7" y1="14" x2="17" y2="14"/>
-    <line x1="9" y1="10" x2="9" y2="14"/>
-    <line x1="15" y1="10" x2="15" y2="14"/>
-</svg>
-
-    </a>
-    <a href="/distribution" >
-    <svg class="w-8 hover:text-green-200  h-8 mr-2 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5h6M9 8h6m-6 3h6M4.996 5h.01m-.01 3h.01m-.01 3h.01M2 1h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Z"/>
-  </svg>    </a>
-
-    
+<body>
    
-
-  </div>
-
-  <div class="flex flex-col space-y-4">
-    <a><svg class="w-8 h-8 mr-2 text-white " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="currentColor" /></svg></a> 
-    <a href="/login"><svg class="w-8 h-8 mr-2 text-white hover:text-red-700" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 4.00894C13.0002 3.45665 12.5527 3.00876 12.0004 3.00854C11.4481 3.00833 11.0002 3.45587 11 4.00815L10.9968 12.0116C10.9966 12.5639 11.4442 13.0118 11.9965 13.012C12.5487 13.0122 12.9966 12.5647 12.9968 12.0124L13 4.00894Z" fill="currentColor" /><path d="M4 12.9917C4 10.7826 4.89541 8.7826 6.34308 7.33488L7.7573 8.7491C6.67155 9.83488 6 11.3349 6 12.9917C6 16.3054 8.68629 18.9917 12 18.9917C15.3137 18.9917 18 16.3054 18 12.9917C18 11.3348 17.3284 9.83482 16.2426 8.74903L17.6568 7.33481C19.1046 8.78253 20 10.7825 20 12.9917C20 17.41 16.4183 20.9917 12 20.9917C7.58172 20.9917 4 17.41 4 12.9917Z" fill="currentColor" /></svg></a>
-  </div> 
-</div>
-
-
-
-
-
-<div class="flex flex-col bg-green-100 w-full ml-1 space-y-1"> 
-
-  <div class="flex flex-col items-start  w-full bg-green-200 border border-black rounded ">
-
-        @yield('content')
-     
-  </div>
-
-  
-</div>
-
-
 <style>
- 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
 
-  th, td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: left;
-  }
+:root {
+--light: #edf2f9;
+--dark: #152e4d;
+--darker: #12263f;
+}
 
-  th {
-    background-color: #f7fafc;
-  }
+.dark .dark\:text-light {
+    color: var(--light);
+}
 
-  
-  button {
-    padding: 8px;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    cursor: pointer;
-    border-radius: 4px;
-  }
+.dark .dark\:bg-dark {
+    background-color: var(--dark);
+}
 
-  a.buttonclr {
-    padding: 8px;
-    background: linear-gradient(90deg, #036812 0%, #15b9c1 100%);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-  }
+.dark .dark\:bg-darker {
+    background-color: var(--darker);
+}
+
+.dark .dark\:text-gray-300 {
+    color: #d1d5db;
+}
+
+.dark .dark\:text-indigo-700 {
+c   olor: #4338ca;
+}
+
+.dark .dark\:text-indigo-500 {
+    color: #6366f1;
+}
+
+.dark .dark\:text-indigo-100 {
+    color: #e0e7ff;
+}
+
+.dark .dark\:hover\:text-light:hover {
+    color: var(--light);
+}
+
+.dark .dark\:border-indigo-800 {
+    border-color: #3730a3;
+}
+
+.dark .dark\:border-indigo-700 {
+    border-color: #4338ca;
+}
+
+.dark .dark\:bg-indigo-600 {
+    background-color: #4f46e5;
+}
+
+.dark .dark\:hover\:bg-indigo-600:hover {
+    background-color: #4f46e5;
+}
+
+.dark .dark\:border-indigo-500 {
+    border-color: #6366f1;
+}
+
+.dark .group:hover .dark\:group-hover\:text-indigo-400 {
+    color: #818cf8;
+}
+
+.hover\:overflow-y-auto:hover {
+    overflow-y: auto;
+}
 </style>
 
+<div
+    x-data="setup()"
+    x-init="$refs.loading.classList.add('hidden')"
+    :class="{ 'dark': isDark}"
+    @resize.window="watchScreen()"
+>
+    <div class="flex h-screen antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light">
 
+    <div
+        x-ref="loading"
+        class="fixed inset-0 z-50 flex items-center justify-center text-2xl font-semibold text-white bg-indigo-800"
+    >
+        Loading.....
+    </div>
+
+  
+    <div
+        x-show="isSidebarOpen"
+        @click="isSidebarOpen = false"
+        class="fixed inset-0 z-10 bg-indigo-800 md:hidden"
+        style="opacity: 0.5"
+        aria-hidden="true"
+    ></div>
+
+    <aside
+        x-show="isSidebarOpen"
+        x-transition:enter="transition-all transform duration-300 ease-in-out"
+        x-transition:enter-start="-translate-x-full opacity-0"
+        x-transition:enter-end="translate-x-0 opacity-100"
+        x-transition:leave="transition-all transform duration-300 ease-in-out"
+        x-transition:leave-start="translate-x-0 opacity-100"
+        x-transition:leave-end="-translate-x-full opacity-0"
+        x-ref="sidebar"
+        @keydown.escape="window.innerWidth <= 768 ? isSidebarOpen = false : ''"
+        tabindex="-1"
+        class="fixed inset-y-0 z-10 flex flex-shrink-0 bg-white border-r md:static dark:border-indigo-800 dark:bg-darker focus:outline-none"
+    >
+        
+        <nav class="flex flex-col flex-shrink-0 h-full px-2 py-4 border-r dark:border-indigo-800">
+
+        
+        <div class="flex flex-col items-center justify-center flex-1 space-y-4">
+        
+            <a
+            href="/distribution"
+            class="p-2 text-white transition-colors duration-200 bg-indigo-600 rounded-full hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:bg-indigo-100 dark:focus:bg-indigo-700 focus:ring-indigo-800"
+            >
+            <span class="sr-only">Home</span>
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+            </svg>
+            </a>
+          
+            <a
+            href="/examination_committees"
+            class="p-2 text-white transition-colors duration-200 bg-indigo-600 rounded-full hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:bg-indigo-100 dark:focus:bg-indigo-700 focus:ring-indigo-800"
+            >
+            <span class="sr-only">Messages</span>
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                />
+            </svg>
+            </a>
+            
+            <a
+            href="/examination_room"
+            class="p-2 text-white transition-colors duration-200 bg-indigo-600 rounded-full hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:bg-indigo-100 dark:focus:bg-indigo-700 focus:ring-indigo-800"
+            >
+            <span class="sr-only">Another Link</span>
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                />
+            </svg>
+            </a>
+
+            <a
+            href="/candidates"
+            class="p-2 text-white transition-colors duration-200 bg-indigo-600 rounded-full hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:bg-indigo-100 dark:focus:bg-indigo-700 focus:ring-indigo-800"
+            >
+            <span class="sr-only">Users</span>
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+            </svg>
+            </a>
+        </div>
+
+        <a href="/login" class="flex items-center justify-center flex-shrink-0">
+       
+            <button
+            class="p-2 text-indigo-400 transition-colors duration-200 rounded-full bg-indigo-50 hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:bg-indigo-100 dark:focus:bg-indigo-700 focus:ring-indigo-800"
+            >
+            <span class="sr-only">Logout</span>
+            <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                />
+            </svg>
+            </button>
+        </a>
+        </nav>
+    </aside>
+
+    <div class="flex flex-1 h-screen overflow-y-scroll">
+
+        <main class="flex-1">
+        <header class="flex items-center justify-between p-4">
+            <div class="flex items-center space-x-4 md:space-x-0">
+            
+            <button
+                @click="isSidebarOpen = true; $nextTick(() => { $refs.sidebar.focus() })"
+                class="p-1 text-indigo-400 transition-colors duration-200 rounded-md bg-indigo-50 md:hidden hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:ring"
+            >
+                <span class="sr-only">Open main manu</span>
+                <span aria-hidden="true">
+                <svg
+                    x-show="!isSidebarOpen"
+                    class="w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                    />
+                </svg>
+                <svg
+                    x-show="isSidebarOpen"
+                    class="w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                </span>
+            </button>
+
+<!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+
+            <h1 class="text-2xl font-medium">Home</h1>
+            </div>
+            <div class="space-x-2">
+            
+            <button aria-hidden="true" class="relative focus:outline-none" x-cloak @click="toggleTheme">
+                <div class="w-12 h-6 transition bg-indigo-100 rounded-full outline-none dark:bg-indigo-400"></div>
+                <div
+                class="absolute top-0 left-0 inline-flex items-center justify-center w-6 h-6 transition-all duration-150 transform scale-110 rounded-full shadow-sm"
+                :class="{ 'translate-x-0 -translate-y-px  bg-white text-indigo-700': !isDark, 'translate-x-6 text-indigo-100 bg-indigo-800': isDark }"
+                >
+                <svg
+                    x-show="!isDark"
+                    class="w-4 h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    />
+                </svg>
+                <svg
+                    x-show="isDark"
+                    class="w-4 h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                    />
+                </svg>
+                </div>
+            </button>
+            
+
+            <div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg">
+                <table class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
+                    <thead class="text-xs text-white uppercase bg-indigo-800 dark:text-white">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                Product name
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Color
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Category
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Price
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                edit
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                delete
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <tr class="bg-indigo-600 border-b border-blue-400">
+                            <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+                                Apple MacBook Pro 17"
+                            </th>
+                            <td class="px-6 py-4">
+                                Silver
+                            </td>
+                            <td class="px-6 py-4">
+                                Laptop
+                            </td>
+                            <td class="px-6 py-4">
+                                $2999
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">Edit</a>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">delete</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-indigo-600 border-b border-blue-400">
+                            <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+                                Microsoft Surface Pro
+                            </th>
+                            <td class="px-6 py-4">
+                                White
+                            </td>
+                            <td class="px-6 py-4">
+                                Laptop PC
+                            </td>
+                            <td class="px-6 py-4">
+                                $1999
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">Edit</a>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">delete</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-indigo-600 border-b border-blue-400">
+                            <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+                                Magic Mouse 2
+                            </th>
+                            <td class="px-6 py-4">
+                                Black
+                            </td>
+                            <td class="px-6 py-4">
+                                Accessories
+                            </td>
+                            <td class="px-6 py-4">
+                                $99
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">Edit</a>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">delete</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-indigo-600 border-b border-blue-400">
+                            <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+                                Google Pixel Phone
+                            </th>
+                            <td class="px-6 py-4">
+                                Gray
+                            </td>
+                            <td class="px-6 py-4">
+                                Phone
+                            </td>
+                            <td class="px-6 py-4">
+                                $799
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">Edit</a>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">delete</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-indigo-600 border-blue-40">
+                            <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
+                                Apple Watch 5
+                            </th>
+                            <td class="px-6 py-4">
+                                Red
+                            </td>
+                            <td class="px-6 py-4">
+                                Wearables
+                            </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">Edit</a>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#" class="font-medium text-white hover:underline">delete</a>
+                            </td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        @yield('content')
+        
+
+
+        
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.6.x/dist/component.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+<script>
+    const setup = () => {
+    const getTheme = () => {
+        if (window.localStorage.getItem('dark')) {
+        return JSON.parse(window.localStorage.getItem('dark'))
+        }
+        return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+
+    const setTheme = (value) => {
+        window.localStorage.setItem('dark', value)
+    }
+
+    return {
+        loading: true,
+        isDark: getTheme(),
+        toggleTheme() {
+            this.isDark = !this.isDark
+            setTheme(this.isDark)
+        },
+        setLightTheme() {
+            this.isDark = false
+            setTheme(this.isDark)
+        },
+        setDarkTheme() {
+            this.isDark = true
+            setTheme(this.isDark)
+        },
+        watchScreen() {
+            if (window.innerWidth <= 768) {
+                this.isSidebarOpen = false
+                this.isUserPanelOpen = false
+            } else if (window.innerWidth >= 768 && window.innerWidth < 1280) {
+                this.isSidebarOpen = true
+                this.isUserPanelOpen = false
+            } else if (window.innerWidth >= 1280) {
+                this.isSidebarOpen = true
+                this.isUserPanelOpen = true
+            }
+        },
+        isSidebarOpen: window.innerWidth >= 768 ? true : false,
+        toggleSidbarMenu() {
+            this.isSidebarOpen = !this.isSidebarOpen
+        },
+        isUserPanelOpen: window.innerWidth >= 1280 ? true : false,
+        openUserPanel() {
+            this.isUserPanelOpen = true
+            this.$nextTick(() => {
+                this.$refs.userPanel.focus()
+            })
+        },
+        isSettingsPanelOpen: false,
+        openSettingsPanel() {
+            this.isSettingsPanelOpen = true
+            this.$nextTick(() => {
+                this.$refs.settingsPanel.focus()
+            })
+        },
+        isNotificationsPanelOpen: false,
+        openNotificationsPanel() {
+            this.isNotificationsPanelOpen = true
+            this.$nextTick(() => {
+                this.$refs.notificationsPanel.focus()
+            })
+        },
+        isSearchPanelOpen: false,
+        openSearchPanel() {
+            this.isSearchPanelOpen = true
+            this.$nextTick(() => {
+                this.$refs.searchInput.focus()
+            })
+        },
+    }
+}
+</script>
 </body>
 </html>

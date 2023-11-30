@@ -12,4 +12,7 @@ class authController extends Controller
     public function register(){
         return view('register');
     }
+    public function test(){
+        return view('test');
+    }
 }
