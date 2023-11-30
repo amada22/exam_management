@@ -5,10 +5,10 @@
 <br>
 <form action="{{ route('distribution') }}" method="post">
     @csrf
-    <button type="submit" >Auto Assign Candidates</button>
+    <button class="bg-indigo-600 text-white h-15 w-40 sm:rounded-lg" type="submit" >Auto Assign Candidates</button>
     </form>
 
-    <button type="submit"> <a href="{{ route('delete_D') }}">Reset </a></button>
+    <button class="bg-red-600 text-white h-15 w-20 sm:rounded-lg" type="submit"> <a href="{{ route('delete_D') }}">Reset </a></button>
        <br><br>
 
 
@@ -17,7 +17,52 @@
 
     <br>
 
+    <div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg">
+        
     @foreach ($rooms as $room)
+
+       <!--  <h2>{{ $room->name }} Candidates</h2>-->
+
+        <table id="table-{{ $loop->index }}" class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
+            <thead class="text-xs text-white uppercase bg-indigo-800 dark:text-white">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Name
+                    </th>     
+                </tr>
+            </thead>
+            <tbody >
+                    @php
+                        $sortedCandidates = $room->candidates->sortBy('name');
+                    @endphp
+
+                    @foreach ($sortedCandidates as $candidate)
+                        <tr class="bg-indigo-600 border-b border-blue-400">
+                            <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100" >
+                                {{ $candidate->name }}
+                            </th>
+                        </tr>
+                    @endforeach
+
+                    @if ($sortedCandidates->isEmpty())
+                        <tr class="bg-indigo-600 border-b border-blue-400">
+                            <td scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">No candidates assigned to this room</td>
+                        </tr>
+                    @endif
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <button class="bg-indigo-600 text-white h-15 w-20 sm:rounded-lg" onclick="printTable('{{ $room->name }}', 'table-{{ $loop->index }}')">Print Table</button>
+        <br>
+        <br>
+        <br>
+     @endforeach
+</div>
+
+
+
+   <!-- @foreach ($rooms as $room)
     <h2 style="color: black; font-size: 24px;">{{ $room->name }} Candidates</h2>
         <table id="table-{{ $loop->index }}"> 
             <thead>
@@ -91,7 +136,7 @@
         @endforeach
     </tbody>
     </table>
-
+-->
    
     <script>
     function printTable(roomName, tableId) {

@@ -370,7 +370,7 @@ c   olor: #4338ca;
 
      
 
-
+<!--
 <div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg">
     <table class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
         <thead class="text-xs text-white uppercase bg-indigo-800 dark:text-white">
@@ -416,90 +416,11 @@ c   olor: #4338ca;
                     <a href="#" class="font-medium text-white hover:underline">delete</a>
                 </td>
             </tr>
-            <tr class="bg-indigo-600 border-b border-blue-400">
-                <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
-                    Microsoft Surface Pro
-                </th>
-                <td class="px-6 py-4">
-                    White
-                </td>
-                <td class="px-6 py-4">
-                    Laptop PC
-                </td>
-                <td class="px-6 py-4">
-                    $1999
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">Edit</a>
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">delete</a>
-                </td>
-            </tr>
-            <tr class="bg-indigo-600 border-b border-blue-400">
-                <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
-                    Magic Mouse 2
-                </th>
-                <td class="px-6 py-4">
-                    Black
-                </td>
-                <td class="px-6 py-4">
-                    Accessories
-                </td>
-                <td class="px-6 py-4">
-                    $99
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">Edit</a>
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">delete</a>
-                </td>
-            </tr>
-            <tr class="bg-indigo-600 border-b border-blue-400">
-                <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
-                    Google Pixel Phone
-                </th>
-                <td class="px-6 py-4">
-                    Gray
-                </td>
-                <td class="px-6 py-4">
-                    Phone
-                </td>
-                <td class="px-6 py-4">
-                    $799
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">Edit</a>
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">delete</a>
-                </td>
-            </tr>
-            <tr class="bg-indigo-600 border-blue-40">
-                <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
-                    Apple Watch 5
-                </th>
-                <td class="px-6 py-4">
-                    Red
-                </td>
-                <td class="px-6 py-4">
-                    Wearables
-                </td>
-                <td class="px-6 py-4">
-                    $999
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">Edit</a>
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">delete</a>
-                </td> 
-            </tr>
+          
         </tbody>
     </table>
 </div>
-
+-->
 
         @yield('content')
         
