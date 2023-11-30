@@ -555,35 +555,7 @@ c   olor: #4338ca;
         isSidebarOpen: window.innerWidth >= 768 ? true : false,
         toggleSidbarMenu() {
             this.isSidebarOpen = !this.isSidebarOpen
-        },
-        isUserPanelOpen: window.innerWidth >= 1280 ? true : false,
-        openUserPanel() {
-            this.isUserPanelOpen = true
-            this.$nextTick(() => {
-                this.$refs.userPanel.focus()
-            })
-        },
-        isSettingsPanelOpen: false,
-        openSettingsPanel() {
-            this.isSettingsPanelOpen = true
-            this.$nextTick(() => {
-                this.$refs.settingsPanel.focus()
-            })
-        },
-        isNotificationsPanelOpen: false,
-        openNotificationsPanel() {
-            this.isNotificationsPanelOpen = true
-            this.$nextTick(() => {
-                this.$refs.notificationsPanel.focus()
-            })
-        },
-        isSearchPanelOpen: false,
-        openSearchPanel() {
-            this.isSearchPanelOpen = true
-            this.$nextTick(() => {
-                this.$refs.searchInput.focus()
-            })
-        },
+        }
     }
 }
 </script>
