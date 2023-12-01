@@ -31,7 +31,7 @@ class ExaminationRoomController extends Controller
 
     public function delete($id){
 
-        DB::statement('DELETE FROM candidate_examination_committee WHERE examination_room_id = ?', [$id]);
+        DB::statement('DELETE FROM candidate_examination_room WHERE examination_room_id = ?', [$id]);
 
         $ExaminationRoom = ExaminationRoom::findOrFail($id);
         $ExaminationRoom->delete();

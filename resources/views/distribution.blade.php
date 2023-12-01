@@ -5,7 +5,7 @@
 <br>
 <form action="{{ route('distribution') }}" method="post" class="text-center">
     @csrf
-    <button class="bg-indigo-600 text-white h-15 w-40 sm:rounded-lg" type="submit" >Auto Assign Candidates</button>
+    <button class="bg-indigo-600 text-white h-15 w-40 sm:rounded-lg hover:bg-green-500" type="submit" >Auto Assign Candidates</button>
     </form>
 <br><br>
 
@@ -13,7 +13,7 @@
         
     @foreach ($rooms as $room)
 
-       <h2 class="text-center text-4xl" >{{ $room->name }} Candidates</h2>
+       <h2 class="text-center text-4xl underline" >{{ $room->name }} Candidates</h2>
 <br><br>
         <table id="table-{{ $loop->index }}" class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
             <thead class="text-xs text-white uppercase bg-indigo-800 dark:text-white">
@@ -45,14 +45,14 @@
         </table>
         <br>
         <br>
-        <button class="bg-indigo-600 text-white h-15 w-20 sm:rounded-lg" onclick="printTable('{{ $room->name }}', 'table-{{ $loop->index }}')">Print Table</button>
+        <button class="bg-indigo-600 text-white h-15 w-20 sm:rounded-lg hover:bg-indigo-800" onclick="printTable('{{ $room->name }}', 'table-{{ $loop->index }}')">Print Table</button>
         <br>
         <br>
         <br>
      @endforeach
         <div class="text-center">
-            <button class="text-center bg-red-600 text-white h-15 w-20 sm:rounded-lg" type="submit"> <a  href="{{ route('delete_D') }}">Reset </a></button>
-                <br><br>
+            <button class="text-center bg-red-600 text-white h-20 w-40 sm:rounded-lg hover:bg-red-800" type="submit"> <a  href="{{ route('delete_D') }}">Reset </a></button>
+                <br><br><br><br>
         </div>
 </div>
 
