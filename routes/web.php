@@ -51,4 +51,4 @@ Route::get('/modify_committees/{id?}',[ExaminationCommitteeController::class,"mo
 
 Route::get('/login',[authController::class,"login"])->name('login');
 Route::get('/register',[authController::class,"register"])->name('register');
-Route::get('/test',[authController::class,"test"])->name('test');
+

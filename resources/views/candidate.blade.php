@@ -2,43 +2,37 @@
  
 @section('content')
 
-<h1 class="text-4xl">List of Candidates</h1>
 
-<!--
-<table class="border-2 p-4" >
-    <thead>
-        <tr>
-            <th class="border-2">Full Name</th>
-            <th class="border-2 ">First Name</th>
-            <th class="border-2" >Last Name</th>
-            <th class="border-2" >UPDATE</th>
-            <th class="border-2" >DELETE</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($candidates as $candidate)
-            <tr>
-           
-                <td class="border-2">{{ $candidate->name }}</td>
-                <td class="border-2">{{ $candidate->first_name }}</td>
-                <td class="border-2">{{ $candidate->last_name }}</td>
-                <td class="border-2">
-                    <a href="{{ route('modify_C', ['id' => $candidate->id]) }}">UPDATE</a>
-                </td>
-                <td class="border-2">
-                    <form method="POST" action="{{route('delete_C', ['id' => $candidate->id])}}">
-                        @csrf
-                        @method("DELETE")
-                        <input type="submit" value="DELETE" />
-                    </form>
-                
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
-</table>-->
+<h1 class="text-center text-4xl">Add New Candidate</h1>
+
+<section class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg bg-indigo-800 ">
+  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16 ">
+      <form method="POST" action="{{route('store_C')}}">
+      @csrf
+
+            <div class="grid gap-4 sm:grid-cols-2 sm:gap-6 ">
+              <div class="sm:col-span-2">
+                  <label for="name" class="text-white block mb-2 text-sm font-medium  dark:text-white">Full Name</label>
+                  <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
+              </div>
+              <div class="w-full">
+                  <label for="first_name" class="text-white block mb-2 text-sm font-medium  dark:text-white">First name</label>
+                  <input type="text" name="first_name" id="first_name" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Product brand" required="">
+              </div>
+              <div class="w-full">
+                  <label for="last_name" class="text-white block mb-2 text-sm font-medium  dark:text-white">Last name</label>
+                  <input type="text" name="last_name" id="last_name" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Product brand" required="">
+              </div>            
+            </div>
+          <button type="submit" class="bg-indigo-300 inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center  rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900  text-black">
+          Add Candidate
+          </button>
+      </form>
+  </div>
+</section>
 
 
+<h1 class="text-center text-4xl">List of Candidates</h1>
 <div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg">
     <table class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
         <thead class="text-xs text-white uppercase bg-indigo-800 dark:text-white">
@@ -92,28 +86,7 @@
     </table>
 </div>
 
-
-
-
-<h1 class="text-4xl">Add New Candidate</h1>
-
-<form method="POST" action="{{route('store_C')}}">
-    @csrf
-
-    <label for="name">Full Name:</label>
-    <input type="text" name="name" required>
-
-    <label for="first_name">First Name:</label>
-    <input type="text" name="first_name" required>
-
-    <label for="last_name">Last Name:</label>
-    <input type="text" name="last_name" required>
-
-
-  
-
-    <button type="submit">Add Candidate</button>
-</form>
+<br><br><br>
 
 
 

@@ -1,8 +1,62 @@
 @extends('master')
  
 @section('content')
+
+
+
+
+<h1 class="text-center text-4xl">ADD NEW ExaminationCommittee</h1>
+
+<div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg bg-indigo-800">
+<form  method="POST" action="{{ route('store') }}" class="m-5 relative overflow-x-auto sm:rounded-lg  p-8 max-w-2xl mx-auto lg:py-16">
+    @csrf
+
+    <div class="mb-4">
+        <label for="committee_name" class="text-white block mb-2 text-sm font-medium dark:text-white">Committee Name:</label>
+        <input type="text" name="committee_name" class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+    </div>
+
+    <div id="supervisorFields">
+        <label for="Supervisor" class="text-white block mb-2 text-sm font-medium dark:text-white">Supervisor Name:</label>
+        <input type="text" name="supervisors[]" class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+    </div>
+
+    <button type="button" onclick="addSupervisorField()" class="bg-indigo-300 inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 text-black">
+        Add Supervisor
+    </button>
+
+    <br>
+
+    <button type="submit" class="bg-indigo-300 inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 text-black">
+        Add Examination Committee
+    </button>
+</form>
+</div>
+
+
+<script>
+    function addSupervisorField() {
+        var supervisorFields = document.getElementById('supervisorFields');
+
+        var label = document.createElement('label');
+        label.setAttribute('for', 'Supervisor');
+        label.setAttribute('class', 'text-white');
+        label.innerText = 'Supervisor Name:';
+
+        var input = document.createElement('input');
+        input.setAttribute('type', 'text');
+        input.setAttribute('name', 'supervisors[]');
+        input.setAttribute('class', 'bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500');
+        input.setAttribute('required', true);
+
+        supervisorFields.appendChild(document.createElement('br'));
+        supervisorFields.appendChild(label);
+        supervisorFields.appendChild(input);
+    }
+</script>
+
  
-<h1 class="text-4xl">List of ExaminationCommittee</h1>
+<h1 class="text-center text-4xl">List of ExaminationCommittee</h1>
 
 <div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg">
     <table class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
@@ -55,6 +109,8 @@
         </tbody>
     </table>
 </div>
+<br><br><br>
+
 
 <!--<table class="border-2 p-4">
     <thead>
@@ -94,7 +150,7 @@
         @endforeach
     </tbody>
 </table>
--->
+
 
 
 
@@ -138,6 +194,6 @@
     }
 </script>
 
-
+-->
 
 @endsection

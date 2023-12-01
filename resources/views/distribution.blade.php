@@ -1,28 +1,20 @@
 @extends('master')
  
 @section('content')
-<h1 class="text-4xl m-auto">Distribution</h1>
+<h1 class="text-center text-4xl">Distribution</h1>
 <br>
-<form action="{{ route('distribution') }}" method="post">
+<form action="{{ route('distribution') }}" method="post" class="text-center">
     @csrf
     <button class="bg-indigo-600 text-white h-15 w-40 sm:rounded-lg" type="submit" >Auto Assign Candidates</button>
     </form>
-
-    <button class="bg-red-600 text-white h-15 w-20 sm:rounded-lg" type="submit"> <a href="{{ route('delete_D') }}">Reset </a></button>
-       <br><br>
-
-
-
-    <h1 class="text-4xl m-auto" >RESULT :</h1> 
-
-    <br>
+<br><br>
 
     <div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg">
         
     @foreach ($rooms as $room)
 
-       <!--  <h2>{{ $room->name }} Candidates</h2>-->
-
+       <h2 class="text-center text-4xl" >{{ $room->name }} Candidates</h2>
+<br><br>
         <table id="table-{{ $loop->index }}" class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
             <thead class="text-xs text-white uppercase bg-indigo-800 dark:text-white">
                 <tr>
@@ -58,7 +50,12 @@
         <br>
         <br>
      @endforeach
+        <div class="text-center">
+            <button class="text-center bg-red-600 text-white h-15 w-20 sm:rounded-lg" type="submit"> <a  href="{{ route('delete_D') }}">Reset </a></button>
+                <br><br>
+        </div>
 </div>
+
 
 
 

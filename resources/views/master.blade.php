@@ -272,7 +272,7 @@ c   olor: #4338ca;
 
 <!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
 
-            <h1 class="text-2xl font-medium">Home</h1>
+          
             </div>
             <div class="space-x-2">
             
