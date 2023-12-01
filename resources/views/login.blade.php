@@ -9,17 +9,22 @@
 <body class="bg-indigo-800 flex items-center justify-center h-screen">
     <div class="bg-indigo-200 p-8 rounded shadow-md w-96">
         <h2 class="text-3xl font-semibold mb-4 text-indigo-800">Login</h2>
-        <form>
+
+        <form method="post" action="{{route('login')}}">
+        @csrf
             <div class="mb-4">
-                <label for="username" class="block text-sm font-medium text-indigo-800">Username</label>
-                <input type="text" id="username" name="username" class="mt-1 p-2 w-full border rounded">
+                <label for="email" class="block text-sm font-medium text-indigo-800">email</label>
+                <input type="text" id="email" name="email" class="mt-1 p-2 w-full border rounded">
             </div>
             <div class="mb-4">
                 <label for="password" class="block text-sm font-medium text-indigo-800">Password</label>
                 <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded">
             </div>
             <button type="submit" class="bg-indigo-800 text-white py-2 px-4 rounded hover:bg-green-600">Login</button>
+            <div class="text-right text-sm font-medium text-indigo-800 underline"><a  href="{{ route('show_register') }}">Register</a></div>
+
         </form>
+        
     </div>
 </body>
 </html>

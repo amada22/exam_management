@@ -206,7 +206,7 @@ c   olor: #4338ca;
             </a>
         </div>
 
-        <a href="/login" class="flex items-center justify-center flex-shrink-0">
+        <a href="/logout" class="flex items-center justify-center flex-shrink-0">
        
             <button
             class="p-2 text-indigo-400 transition-colors duration-200 rounded-full bg-indigo-50 hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:bg-indigo-100 dark:focus:bg-indigo-700 focus:ring-indigo-800"

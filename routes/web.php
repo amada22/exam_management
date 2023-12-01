@@ -16,6 +16,9 @@ use App\Http\Controllers\authController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::middleware(['auth'])->group(function () {
+    
 Route::get('/distribution',[DistributionController::class,"index"])->name('index_D');
 Route::get('/',[DistributionController::class,"master"])->name('master');
 Route::post('/',[DistributionController::class,"autoAssignRoomsAndCommittees"])->name('distribution');
@@ -49,6 +52,17 @@ Route::put('/modify_committees/{id}', [ExaminationCommitteeController::class, 'u
 Route::get('/modify_committees/{id?}',[ExaminationCommitteeController::class,"modify"])->name('modify');
 
 
-Route::get('/login',[authController::class,"login"])->name('login');
-Route::get('/register',[authController::class,"register"])->name('register');
+Route::get('/logout',[authController::class,"logout"])->name('logout');
+
+});
+
+Route::middleware(['guest'])->group(function () {
+
+    Route::get('/login',[authController::class,"show_login"])->name('show_login');
+    Route::post('/login',[authController::class,"login"])->name('login');
+    Route::get('/register',[authController::class,"show_register"])->name('show_register');
+    Route::post('/register',[authController::class,"register"])->name('register');
+});
+
+
 

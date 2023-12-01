@@ -10,11 +10,11 @@
     <div class="bg-indigo-200 p-8 rounded shadow-md w-96">
         <h2 class="text-3xl font-semibold mb-4 text-indigo-800">Register</h2>
 
-        <form>
-        
+        <form method="post" action="{{route('register')}}">
+        @csrf
             <div class="mb-4">
-                <label for="username" class="block text-sm font-medium text-indigo-800">Username</label>
-                <input type="text" id="username" name="username" class="mt-1 p-2 w-full border rounded">
+                <label for="name" class="block text-sm font-medium text-indigo-800">user name</label>
+                <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded">
             </div>
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-indigo-800">Email</label>
