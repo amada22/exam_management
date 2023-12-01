@@ -314,114 +314,13 @@ c   olor: #4338ca;
                 </svg>
                 </div>
             </button>
-            
-            <!-- Search panel button 
-            <button
-                @click="openSearchPanel"
-                class="p-1 text-indigo-400 transition-colors duration-200 rounded-md bg-indigo-50 hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:ring"
-            >
-                <span class="sr-only">Open search panel</span>
-                <span aria-hidden="true">
-                <svg
-                    class="w-8 h-8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                </svg>
-                </span>
-            </button>-->
-
-            <!-- User panel button
-            <button
-                @click="openUserPanel"
-                class="p-1 text-indigo-400 transition-colors duration-200 rounded-md bg-indigo-50 xl:hidden hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:ring"
-            >
-                <span class="sr-only">Open user panel</span>
-                <span aria-hidden="true">
-                <svg
-                    class="w-8 h-8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                    />
-                </svg>
-                </span>
-            </button> -->
             </div>
         </header>
 
 
 
 
-     
-
-<!--
-<div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg">
-    <table class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
-        <thead class="text-xs text-white uppercase bg-indigo-800 dark:text-white">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                    Product name
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Color
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Category
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Price
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    edit
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    delete
-                </th>
-            </tr>
-        </thead>
-        <tbody >
-            <tr class="bg-indigo-600 border-b border-blue-400">
-                <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
-                    Apple MacBook Pro 17"
-                </th>
-                <td class="px-6 py-4">
-                    Silver
-                </td>
-                <td class="px-6 py-4">
-                    Laptop
-                </td>
-                <td class="px-6 py-4">
-                    $2999
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">Edit</a>
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-white hover:underline">delete</a>
-                </td>
-            </tr>
-          
-        </tbody>
-    </table>
-</div>
--->
-
+    
         @yield('content')
         
 
