@@ -145,7 +145,7 @@ c   olor: #4338ca;
             href="/examination_committees"
             class="p-2 text-white transition-colors duration-200 bg-indigo-600 rounded-full hover:text-indigo-600 hover:bg-indigo-100 dark:hover:text-light dark:hover:bg-indigo-700 dark:bg-dark focus:outline-none focus:bg-indigo-100 dark:focus:bg-indigo-700 focus:ring-indigo-800"
             >
-            <span class="sr-only">Messages</span>
+            <span class="sr-only">Supervisor</span>
             <svg
                 class="w-7 h-7"
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,12 +154,13 @@ c   olor: #4338ca;
                 stroke="currentColor"
             >
                 <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 2C7.03 2 3 6.03 3 11s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 14c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zM12 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
                 />
             </svg>
+
             </a>
             
             <a
@@ -270,9 +271,8 @@ c   olor: #4338ca;
                 </span>
             </button>
 
-<!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+<!-- ----------------------------------------------------------------------------------------------------------------------- -->
 
-          
             </div>
             <div class="space-x-2">
             
