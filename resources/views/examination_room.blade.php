@@ -28,7 +28,7 @@
   </div>
 </section>
  
-<h1 class="text-4xl" >List of ExaminationRoom</h1>
+<h1 class="text-4xl text-center" >List of ExaminationRoom</h1>
 
 <div class="m-5 relative overflow-x-auto shadow-md  sm:rounded-lg">
     <table class=" w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-00">
